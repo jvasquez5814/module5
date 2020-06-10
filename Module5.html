@@ -7,7 +7,9 @@
 </head>
 <body>
     <br><br>
-    <form method=“post” action=“process.php”>
+    <form method=“post” action=“process.php” id="numform" 
+        oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+
         <input type="text" name="query"><br>
         
         <input type="checkbox" name="pet1" value="dog">I have a dog<br>
@@ -39,9 +41,18 @@
 
         <br><br>
 
-        <textarea rows="15" cols="100">
+        <textarea rows="4" cols="20">
             Here is some default text
         </textarea>
+
+        <br><br>
+
+        0
+        <input type="range" id="a" name="a" value="50">
+        100
+        +
+        <input type="number" id="b" name="b" value="50"> =
+        <output form="numform" name="x" for="a b"></output>
 
         <br><br>
 
